@@ -99,9 +99,8 @@ $(document).ready(function () {
         background: "#f9f9f9",
         cursorwidth: "2px",
         cursorborder: "0",
-        autohidemode: false,
         autohidemode: "leave",
-        mousescrollstep: 100,
+        mousescrollstep: 40,
         scrollspeed: 300,
     });
 
