@@ -69,6 +69,68 @@ h2 {
     display: block;
 }
 
+/* 모달창 */
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+}
+
+.modal-cont {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 45rem;
+    height: 21rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+}
+
+.modal-close {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    width: 6.5rem;
+    height: 3rem;
+    background-color: #fff;
+    color: rgb(111, 35, 249);
+    font-size: 1.3rem;
+    font-weight: 300;
+    cursor: pointer;
+    border: 0.1rem solid rgb(111, 35, 249);
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+}
+
+.modal-close:hover {
+    color: #fff;
+    background-color: rgb(111, 35, 249);
+}
+
+.modal-show {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #666;
+    text-align: center;
+    line-height: 2;
+}
+
+.modal-show>b {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #222;
+    text-align: center;
+}
+
+
 /* 상단 */
 .header {
     position: relative;
@@ -253,8 +315,26 @@ h2 {
     width: 25rem;
     height: 39rem;
     overflow: hidden;
+}
+
+.menu-scroll>.depth2 {
+    width: 24rem;
+}
+
+.menu-scroll:hover {
     overflow-y: scroll;
-    padding: 0 2rem;
+}
+
+.menu-scroll:hover::-webkit-scrollbar {
+    width: 0.2rem;
+}
+
+.menu-scroll:hover::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+}
+
+.menu-scroll:hover::-webkit-scrollbar-track {
+    background-color: #f9f9f9;
 }
 
 .depth1>li {
