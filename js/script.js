@@ -76,11 +76,11 @@ $(document).ready(function () {
             nextEl: ".sw-pro-next",
             prevEl: ".sw-pro-prev",
         },
-        speed : 1500,
+        speed: 1500,
     });
 
     // 메뉴
-    let gnb = $('.gnb');
+    let mainmenu = $('.mainmenu');
     let submenu = $('.sub-menu');
     let menu_timer;
 
@@ -88,12 +88,12 @@ $(document).ready(function () {
         submenu.hide();
     }
 
-    gnb.mouseenter(function () {
+    mainmenu.mouseenter(function () {
         clearTimeout(menu_timer);
         submenu.show();
     });
 
-    gnb.mouseleave(function () {
+    mainmenu.mouseleave(function () {
         clearTimeout(menu_timer);
         menu_timer = setTimeout(late, 300);
     });
@@ -107,19 +107,19 @@ $(document).ready(function () {
         menu_timer = setTimeout(late, 300);
     });
 
-    // // 주메뉴 포커스 유지
-    // let gnb_li_a = $('.gnb>li>a');
-    // let depth1_li = $('.depth1 li');
+    // 주메뉴 포커스 유지
+    let mainmenu_li_a = $('.mainmenu>li>a');
+    let depth1_li = $('.depth1>li');
 
-    // $.each(depth1_li, function (index, item) {
-    //     depth1_li.eq(index).mouseenter(function () {
-    //         gnb_li_a.removeClass('gnb-active');
-    //         gnb_li_a.eq(index).addClass('gnb-active');
-    //     });
-    //     depth1_li.eq(index).mouseleave(function () {
-    //         gnb_li_a.removeClass('gnb-active');
-    //     });
-    // });
+    $.each(depth1_li, function (index, item) {
+        $(this).mouseenter(function () {
+            mainmenu_li_a.removeClass('mainmenu-active');
+            mainmenu_li_a.eq(index).addClass('mainmenu-active');
+        });
+        $(this).mouseleave(function () {
+            mainmenu_li_a.removeClass('mainmenu-active');
+        });
+    });
 
     // 패밀리사이트
     let family_site = $('.family-site');
