@@ -76,6 +76,7 @@ $(document).ready(function () {
             nextEl: ".sw-pro-next",
             prevEl: ".sw-pro-prev",
         },
+        speed : 1500,
     });
 
     // 메뉴
