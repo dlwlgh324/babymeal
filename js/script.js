@@ -116,6 +116,7 @@ $(document).ready(function () {
             mainmenu_li_a.removeClass('mainmenu-active');
             mainmenu_li_a.eq(index).addClass('mainmenu-active');
         });
+
         $(this).mouseleave(function () {
             mainmenu_li_a.removeClass('mainmenu-active');
         });

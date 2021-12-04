@@ -306,6 +306,7 @@ h2 {
     font-family: 'NanumSquare', sans-serif;
     height: 100%;
     color: #1b1b1b;
+    transition: all 0.2s;
 }
 
 .mainmenu>li>a:hover {
