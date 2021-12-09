@@ -125,12 +125,15 @@ $(document).ready(function () {
 
     // 나이스 스크롤
     $("#sub-menu").niceScroll({
-        cursorcolor: "#424242",
-        cursorwidth: "4px",
-        cursorborder: "1px solid #fff",
+        cursorcolor: "#cfcfcf",
+        cursorwidth: "3px",
+        cursoropacitymax: 0.3,
+        cursorborder: "0",
         autohidemode: "leave",
-        mousescrollstep: 40,
-        scrollspeed: 60,
+        background: "#f9f9f9",
+        mousescrollstep: 70,
+        scrollspeed: 300,
+        hidecursordelay: 20,
     });
 
     // 패밀리사이트
