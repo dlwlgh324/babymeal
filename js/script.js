@@ -90,6 +90,7 @@ $(document).ready(function () {
 
     mainmenu.mouseenter(function () {
         clearTimeout(menu_timer);
+        submenu.css('visibility', 'visible');
         submenu.show();
     });
 
@@ -122,6 +123,16 @@ $(document).ready(function () {
         });
     });
 
+    // 나이스 스크롤
+    $("#sub-menu").niceScroll({
+        cursorcolor: "#424242",
+        cursorwidth: "4px",
+        cursorborder: "1px solid #fff",
+        autohidemode: "leave",
+        mousescrollstep: 40,
+        scrollspeed: 60,
+    });
+
     // 패밀리사이트
     let family_site = $('.family-site');
     let family_menu = $('.family-menu');
@@ -135,6 +146,4 @@ $(document).ready(function () {
             $(this).addClass('family-menu-active');
         }
     });
-
-
 });
